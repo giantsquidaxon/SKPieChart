@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C8267C3189186B30016C59C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267C2189186B30016C59C /* Cocoa.framework */; };
+		3C8267C5189186B30016C59C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267C4189186B30016C59C /* SpriteKit.framework */; };
+		3C8267CF189186B30016C59C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267CD189186B30016C59C /* InfoPlist.strings */; };
+		3C8267D1189186B30016C59C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267D0189186B30016C59C /* main.m */; };
+		3C8267D5189186B30016C59C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267D3189186B30016C59C /* Credits.rtf */; };
+		3C8267D7189186B30016C59C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267D6189186B30016C59C /* MainMenu.xib */; };
+		3C8267D9189186B30016C59C /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267D8189186B30016C59C /* MyScene.m */; };
+		3C8267DC189186B30016C59C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267DB189186B30016C59C /* AppDelegate.m */; };
+		3C8267DF189186B30016C59C /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267DE189186B30016C59C /* Spaceship.png */; };
+		3C8267E1189186B30016C59C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267E0189186B30016C59C /* Images.xcassets */; };
+		3C8267E8189186B30016C59C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267E7189186B30016C59C /* XCTest.framework */; };
+		3C8267E9189186B30016C59C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267C2189186B30016C59C /* Cocoa.framework */; };
+		3C8267F1189186B30016C59C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267EF189186B30016C59C /* InfoPlist.strings */; };
+		3C8267F3189186B30016C59C /* SKPieChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267F2189186B30016C59C /* SKPieChartTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C8267EA189186B30016C59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8267B7189186B30016C59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C8267BE189186B30016C59C;
+			remoteInfo = SKPieChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C8267BF189186B30016C59C /* SKPieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKPieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8267C2189186B30016C59C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3C8267C4189186B30016C59C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3C8267C7189186B30016C59C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3C8267C8189186B30016C59C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3C8267C9189186B30016C59C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C8267CC189186B30016C59C /* SKPieChart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKPieChart-Info.plist"; sourceTree = "<group>"; };
+		3C8267CE189186B30016C59C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3C8267D0189186B30016C59C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C8267D2189186B30016C59C /* SKPieChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKPieChart-Prefix.pch"; sourceTree = "<group>"; };
+		3C8267D4189186B30016C59C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3C8267D6189186B30016C59C /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		3C8267D8189186B30016C59C /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		3C8267DA189186B30016C59C /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		3C8267DB189186B30016C59C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3C8267DD189186B30016C59C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3C8267DE189186B30016C59C /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		3C8267E0189186B30016C59C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3C8267E6189186B30016C59C /* SKPieChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKPieChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8267E7189186B30016C59C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3C8267EE189186B30016C59C /* SKPieChartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKPieChartTests-Info.plist"; sourceTree = "<group>"; };
+		3C8267F0189186B30016C59C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3C8267F2189186B30016C59C /* SKPieChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPieChartTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C8267BC189186B30016C59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8267C5189186B30016C59C /* SpriteKit.framework in Frameworks */,
+				3C8267C3189186B30016C59C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8267E3189186B30016C59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8267E9189186B30016C59C /* Cocoa.framework in Frameworks */,
+				3C8267E8189186B30016C59C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C8267B6189186B30016C59C = {
+			isa = PBXGroup;
+			children = (
+				3C8267CA189186B30016C59C /* SKPieChart */,
+				3C8267EC189186B30016C59C /* SKPieChartTests */,
+				3C8267C1189186B30016C59C /* Frameworks */,
+				3C8267C0189186B30016C59C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C8267C0189186B30016C59C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267BF189186B30016C59C /* SKPieChart.app */,
+				3C8267E6189186B30016C59C /* SKPieChartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C8267C1189186B30016C59C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267C2189186B30016C59C /* Cocoa.framework */,
+				3C8267C4189186B30016C59C /* SpriteKit.framework */,
+				3C8267E7189186B30016C59C /* XCTest.framework */,
+				3C8267C6189186B30016C59C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C8267C6189186B30016C59C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267C7189186B30016C59C /* AppKit.framework */,
+				3C8267C8189186B30016C59C /* CoreData.framework */,
+				3C8267C9189186B30016C59C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3C8267CA189186B30016C59C /* SKPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267D6189186B30016C59C /* MainMenu.xib */,
+				3C8267D8189186B30016C59C /* MyScene.m */,
+				3C8267DA189186B30016C59C /* MyScene.h */,
+				3C8267DB189186B30016C59C /* AppDelegate.m */,
+				3C8267DD189186B30016C59C /* AppDelegate.h */,
+				3C8267DE189186B30016C59C /* Spaceship.png */,
+				3C8267E0189186B30016C59C /* Images.xcassets */,
+				3C8267CB189186B30016C59C /* Supporting Files */,
+			);
+			path = SKPieChart;
+			sourceTree = "<group>";
+		};
+		3C8267CB189186B30016C59C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267CC189186B30016C59C /* SKPieChart-Info.plist */,
+				3C8267CD189186B30016C59C /* InfoPlist.strings */,
+				3C8267D0189186B30016C59C /* main.m */,
+				3C8267D2189186B30016C59C /* SKPieChart-Prefix.pch */,
+				3C8267D3189186B30016C59C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C8267EC189186B30016C59C /* SKPieChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267F2189186B30016C59C /* SKPieChartTests.m */,
+				3C8267ED189186B30016C59C /* Supporting Files */,
+			);
+			path = SKPieChartTests;
+			sourceTree = "<group>";
+		};
+		3C8267ED189186B30016C59C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C8267EE189186B30016C59C /* SKPieChartTests-Info.plist */,
+				3C8267EF189186B30016C59C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C8267BE189186B30016C59C /* SKPieChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C8267F6189186B30016C59C /* Build configuration list for PBXNativeTarget "SKPieChart" */;
+			buildPhases = (
+				3C8267BB189186B30016C59C /* Sources */,
+				3C8267BC189186B30016C59C /* Frameworks */,
+				3C8267BD189186B30016C59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKPieChart;
+			productName = SKPieChart;
+			productReference = 3C8267BF189186B30016C59C /* SKPieChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C8267E5189186B30016C59C /* SKPieChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C8267F9189186B30016C59C /* Build configuration list for PBXNativeTarget "SKPieChartTests" */;
+			buildPhases = (
+				3C8267E2189186B30016C59C /* Sources */,
+				3C8267E3189186B30016C59C /* Frameworks */,
+				3C8267E4189186B30016C59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C8267EB189186B30016C59C /* PBXTargetDependency */,
+			);
+			name = SKPieChartTests;
+			productName = SKPieChartTests;
+			productReference = 3C8267E6189186B30016C59C /* SKPieChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C8267B7189186B30016C59C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Richard Smith";
+				TargetAttributes = {
+					3C8267E5189186B30016C59C = {
+						TestTargetID = 3C8267BE189186B30016C59C;
+					};
+				};
+			};
+			buildConfigurationList = 3C8267BA189186B30016C59C /* Build configuration list for PBXProject "SKPieChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3C8267B6189186B30016C59C;
+			productRefGroup = 3C8267C0189186B30016C59C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C8267BE189186B30016C59C /* SKPieChart */,
+				3C8267E5189186B30016C59C /* SKPieChartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C8267BD189186B30016C59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8267DF189186B30016C59C /* Spaceship.png in Resources */,
+				3C8267E1189186B30016C59C /* Images.xcassets in Resources */,
+				3C8267CF189186B30016C59C /* InfoPlist.strings in Resources */,
+				3C8267D5189186B30016C59C /* Credits.rtf in Resources */,
+				3C8267D7189186B30016C59C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8267E4189186B30016C59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8267F1189186B30016C59C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C8267BB189186B30016C59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8267D9189186B30016C59C /* MyScene.m in Sources */,
+				3C8267D1189186B30016C59C /* main.m in Sources */,
+				3C8267DC189186B30016C59C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8267E2189186B30016C59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8267F3189186B30016C59C /* SKPieChartTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C8267EB189186B30016C59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C8267BE189186B30016C59C /* SKPieChart */;
+			targetProxy = 3C8267EA189186B30016C59C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C8267CD189186B30016C59C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C8267CE189186B30016C59C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3C8267D3189186B30016C59C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C8267D4189186B30016C59C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3C8267EF189186B30016C59C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C8267F0189186B30016C59C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C8267F4189186B30016C59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3C8267F5189186B30016C59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3C8267F7189186B30016C59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKPieChart/SKPieChart-Prefix.pch";
+				INFOPLIST_FILE = "SKPieChart/SKPieChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3C8267F8189186B30016C59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKPieChart/SKPieChart-Prefix.pch";
+				INFOPLIST_FILE = "SKPieChart/SKPieChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3C8267FA189186B30016C59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SKPieChart.app/Contents/MacOS/SKPieChart";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKPieChart/SKPieChart-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SKPieChartTests/SKPieChartTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3C8267FB189186B30016C59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SKPieChart.app/Contents/MacOS/SKPieChart";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKPieChart/SKPieChart-Prefix.pch";
+				INFOPLIST_FILE = "SKPieChartTests/SKPieChartTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C8267BA189186B30016C59C /* Build configuration list for PBXProject "SKPieChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C8267F4189186B30016C59C /* Debug */,
+				3C8267F5189186B30016C59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C8267F6189186B30016C59C /* Build configuration list for PBXNativeTarget "SKPieChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C8267F7189186B30016C59C /* Debug */,
+				3C8267F8189186B30016C59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3C8267F9189186B30016C59C /* Build configuration list for PBXNativeTarget "SKPieChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C8267FA189186B30016C59C /* Debug */,
+				3C8267FB189186B30016C59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C8267B7189186B30016C59C /* Project object */;
+}
