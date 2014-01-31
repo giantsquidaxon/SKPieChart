@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Richard Smith. All rights reserved.
 //
 
-#import "PieChart.h"
+#import "SKGraphPieChart.h"
 
-@implementation PieChart{
+@implementation SKGraphPieChart{
     SKNode *backgroundShape;
     SKNode *outlineShape;
     SKNode *pieSlices;
@@ -24,7 +24,7 @@
         _lineColor = [SKColor whiteColor];
         _backgroundColor = [SKColor blackColor];
         _insideLineWidth = 20.0;
-        _insideRadius = 50.0;
+        _insideRadius = 0.0;
         [self addObserver:self forKeyPath:NSStringFromSelector(@selector(outsideRadius)) options:0 context:Nil];
         [self addObserver:self forKeyPath:NSStringFromSelector(@selector(outlineWidth)) options:0 context:Nil];
         [self addObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) options:0 context:Nil];
@@ -62,13 +62,24 @@
 
 -(SKNode *)drawOutline
 {
+    if (_insideRadius <5){
+        return [self drawOutlineCircleWithRadius:_outsideRadius + _outlineWidth / 2.0];
+    }else{
+        SKNode *outline = [[SKNode alloc] init];
+        [outline addChild:[self drawOutlineCircleWithRadius:_outsideRadius]];
+        [outline addChild:[self drawOutlineCircleWithRadius:_insideRadius]];
+        return outline;
+    }
+}
+
+-(SKNode *)drawOutlineCircleWithRadius:(CGFloat) r
+{
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddArc(path, nil, 0, 0, _outsideRadius + _outlineWidth / 2.0, 0, 2 * M_PI, YES);
+    CGPathAddArc(path, nil, 0, 0, r, 0, 2 * M_PI, YES);
     SKShapeNode *shape = [[SKShapeNode alloc] init];
     shape.path = path;
     shape.fillColor = [SKColor clearColor];
     shape.strokeColor = _lineColor;
-    //shape.glowWidth = 5;
     shape.lineWidth = _outlineWidth;
     shape.zPosition = self.zPosition + 0.2;
     return shape;
@@ -94,11 +105,29 @@
 {
     CGAffineTransform mirror = CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0);
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, &mirror, 0, 0);
-    //CGPathAddLineToPoint(path, nil, 0, pieRadius);
-    CGPathAddArc(path, &mirror, 0, 0, _outsideRadius - 2, startAngle, endAngle, NO);
-    CGPathAddLineToPoint(path, &mirror, 0, 0);
     
+    // Leave a gap for the inner ring if the _insideRadius is big enough to draw it.
+    if (_insideRadius < 5){
+        CGPathMoveToPoint(path, &mirror, 0, 0);
+        CGPathAddArc(path, &mirror, 0, 0, _outsideRadius - 2, startAngle, endAngle, NO);
+        CGPathAddLineToPoint(path, &mirror, 0, 0);
+    }else{
+        // Calculate start and end of inside arc
+        //TODO: Probably want to make sure this is doing what it's supposed to, as path is implicitly closed in a weird way
+        CGFloat xStart = cos(startAngle) * _insideRadius;
+        CGFloat yStart = sin(startAngle) * _insideRadius;
+        CGFloat xStop = cos(endAngle) * _insideRadius;
+        CGFloat yStop = sin(endAngle) * _insideRadius;
+        
+        // Inside most-anticlockwise corner
+        CGPathMoveToPoint(path, &mirror, xStart, yStart);
+        // Arc from outside most-anticlockwise to most-clockwise
+        CGPathAddArc(path, &mirror, 0, 0, _outsideRadius - 2, startAngle, endAngle, NO);
+        // Line to most-clockwise inside point
+        CGPathAddLineToPoint(path, &mirror, xStop, yStop);
+        // Arc from inside most-clockwise to most-anticlockwise
+        CGPathAddArc(path, &mirror, 0, 0, _insideRadius + 2, endAngle, startAngle, YES);
+    }
     SKShapeNode *shape = [[SKShapeNode alloc] init];
     shape.path = path;
     
@@ -106,7 +135,7 @@
     shape.strokeColor = c;
     shape.lineWidth = 0.1;
     shape.zRotation =  M_PI / 2.0;
-    shape.zPosition = 102;
+    shape.zPosition = self.zPosition;
     shape.position = CGPointMake(0,0);
 
     return shape;

@@ -7,9 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "PieChartDataSource.h"
+#import "SKGraphPieChartDataSource.h"
 
-@interface PieChart : SKNode
+@interface SKGraphPieChart : SKNode
 
 /// Radius of pie chart
 @property CGFloat outsideRadius;
@@ -28,8 +28,8 @@
 
 @property CGFloat insideLineWidth;
 
-/// Delegate conforming to <PieChartDataSource> protocol
-@property (assign) id<PieChartDataSource> dataDelegate;
+/// Delegate conforming to <SKGraphPieChartDataSource> protocol
+@property (assign) id<SKGraphPieChartDataSource> dataDelegate;
 
 /// Make node containing the pie chart after pulling data from delegate
 -(void) refreshPieChart;

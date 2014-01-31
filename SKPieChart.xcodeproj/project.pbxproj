@@ -21,7 +21,7 @@
 		3C8267E9189186B30016C59C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267C2189186B30016C59C /* Cocoa.framework */; };
 		3C8267F1189186B30016C59C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267EF189186B30016C59C /* InfoPlist.strings */; };
 		3C8267F3189186B30016C59C /* SKPieChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267F2189186B30016C59C /* SKPieChartTests.m */; };
-		3C8267FE189187460016C59C /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267FD189187460016C59C /* PieChart.m */; };
+		3C8267FE189187460016C59C /* SKGraphPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267FD189187460016C59C /* SKGraphPieChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		3C8267EE189186B30016C59C /* SKPieChartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKPieChartTests-Info.plist"; sourceTree = "<group>"; };
 		3C8267F0189186B30016C59C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C8267F2189186B30016C59C /* SKPieChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPieChartTests.m; sourceTree = "<group>"; };
-		3C8267FC189187460016C59C /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
-		3C8267FD189187460016C59C /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
-		3C8267FF189188050016C59C /* PieChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartDataSource.h; sourceTree = "<group>"; };
+		3C8267FC189187460016C59C /* SKGraphPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGraphPieChart.h; sourceTree = "<group>"; };
+		3C8267FD189187460016C59C /* SKGraphPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKGraphPieChart.m; sourceTree = "<group>"; };
+		3C8267FF189188050016C59C /* SKGraphPieChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGraphPieChartDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +133,9 @@
 				3C8267DA189186B30016C59C /* MyScene.h */,
 				3C8267DB189186B30016C59C /* AppDelegate.m */,
 				3C8267DD189186B30016C59C /* AppDelegate.h */,
-				3C8267FF189188050016C59C /* PieChartDataSource.h */,
-				3C8267FC189187460016C59C /* PieChart.h */,
-				3C8267FD189187460016C59C /* PieChart.m */,
+				3C8267FF189188050016C59C /* SKGraphPieChartDataSource.h */,
+				3C8267FC189187460016C59C /* SKGraphPieChart.h */,
+				3C8267FD189187460016C59C /* SKGraphPieChart.m */,
 				3C8267DE189186B30016C59C /* Spaceship.png */,
 				3C8267E0189186B30016C59C /* Images.xcassets */,
 				3C8267CB189186B30016C59C /* Supporting Files */,
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C8267D9189186B30016C59C /* MyScene.m in Sources */,
-				3C8267FE189187460016C59C /* PieChart.m in Sources */,
+				3C8267FE189187460016C59C /* SKGraphPieChart.m in Sources */,
 				3C8267D1189186B30016C59C /* main.m in Sources */,
 				3C8267DC189186B30016C59C /* AppDelegate.m in Sources */,
 			);
@@ -479,6 +479,7 @@
 				3C8267F8189186B30016C59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C8267F9189186B30016C59C /* Build configuration list for PBXNativeTarget "SKPieChartTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +488,7 @@
 				3C8267FB189186B30016C59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

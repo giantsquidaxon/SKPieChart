@@ -7,7 +7,7 @@
 //
 
 #import "MyScene.h"
-#import "PieChart.h"
+#import "SKGraphPieChart.h"
 
 @implementation MyScene
 
@@ -21,11 +21,12 @@
                                        CGRectGetMidY(self.frame));
         
         
-        PieChart *sprite = [[PieChart alloc] init];
+        SKGraphPieChart *sprite = [[SKGraphPieChart alloc] init];
         sprite.dataDelegate = self;
         
         sprite.position = location;
         sprite.outsideRadius = 300.0;
+        sprite.insideRadius = 200.0;
         [sprite refreshPieChart];
         
         [self addChild:sprite];
@@ -39,7 +40,7 @@
     
     CGPoint location = [theEvent locationInNode:self];
     
-    PieChart *sprite = [[PieChart alloc] init];
+    SKGraphPieChart *sprite = [[SKGraphPieChart alloc] init];
     sprite.dataDelegate = self;
     
     sprite.position = location;
@@ -55,12 +56,12 @@
 
 
 #pragma mark Pie Chart Data Source delegate methods
--(NSUInteger) numberOfSectorsForPieChart:(PieChart *) chart
+-(NSUInteger) numberOfSectorsForPieChart:(SKGraphPieChart *) chart
 {
     return 4;
 }
 
--(float) proportionForPieChart:(PieChart *) chart sectorIndex:(NSUInteger) i
+-(float) proportionForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i
 {
     switch (i) {
         case 0:
@@ -81,7 +82,7 @@
     return 0.0;
 }
 
--(SKColor *) colorForPieChart:(PieChart *) chart sectorIndex:(NSUInteger) i
+-(SKColor *) colorForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i
 {
     switch (i) {
         case 0:
