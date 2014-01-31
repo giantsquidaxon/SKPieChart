@@ -7,7 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "PieChartDataSource.h"
 
-@interface MyScene : SKScene
+@interface MyScene : SKScene <PieChartDataSource>
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MyScene.h"
+#import "PieChart.h"
 
 @implementation MyScene
 
@@ -16,14 +17,19 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+        CGPoint location = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         
-        [self addChild:myLabel];
+        
+        PieChart *sprite = [[PieChart alloc] init];
+        sprite.dataDelegate = self;
+        
+        sprite.position = location;
+        sprite.outsideRadius = 300.0;
+        [sprite refreshPieChart];
+        
+        [self addChild:sprite];
+        
     }
     return self;
 }
@@ -33,20 +39,67 @@
     
     CGPoint location = [theEvent locationInNode:self];
     
-    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+    PieChart *sprite = [[PieChart alloc] init];
+    sprite.dataDelegate = self;
     
     sprite.position = location;
-    sprite.scale = 0.5;
-    
-    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-    
-    [sprite runAction:[SKAction repeatActionForever:action]];
+    sprite.outsideRadius = 300.0;
+    [sprite refreshPieChart];
     
     [self addChild:sprite];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+}
+
+
+#pragma mark Pie Chart Data Source delegate methods
+-(NSUInteger) numberOfSectorsForPieChart:(PieChart *) chart
+{
+    return 4;
+}
+
+-(float) proportionForPieChart:(PieChart *) chart sectorIndex:(NSUInteger) i
+{
+    switch (i) {
+        case 0:
+            return 0.2;
+            break;
+        case 1:
+            return 0.4;
+            break;
+        case 2:
+            return 0.1;
+            break;
+        case 3:
+            return 0.3;
+            break;
+        default:
+            break;
+    }
+    return 0.0;
+}
+
+-(SKColor *) colorForPieChart:(PieChart *) chart sectorIndex:(NSUInteger) i
+{
+    switch (i) {
+        case 0:
+            return [SKColor redColor];
+            break;
+        case 1:
+            return [SKColor blueColor];
+            break;
+        case 2:
+            return [SKColor greenColor];
+            break;
+        case 3:
+            return [SKColor yellowColor];
+            break;
+        default:
+            break;
+    }
+    return [SKColor clearColor];
 }
 
 @end
