@@ -30,7 +30,6 @@
         [self addObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) options:0 context:Nil];
         [self addObserver:self forKeyPath:NSStringFromSelector(@selector(backgroundColor)) options:0 context:Nil];
         [self addObserver:self forKeyPath:NSStringFromSelector(@selector(insideLineWidth)) options:0 context:Nil];
-        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(zPosition)) options:0 context:Nil];
     }
     return self;
 }
@@ -43,9 +42,9 @@
     outlineShape = [self drawOutline];
     _wedges = [self drawAllSectors];
     
+    [self addChild:backgroundShape];
     [self addChild:_wedges];
     [self addChild:outlineShape];
-    [self addChild:backgroundShape];
     if (labels) [self addChild:labels];
 }
 
@@ -57,8 +56,7 @@
     shape.path = path;
     shape.fillColor = _backgroundColor;
     shape.lineWidth = 0;
-    shape.zPosition = self.zPosition;
-
+    shape.zPosition = 0;
     return shape;
 }
 
@@ -83,7 +81,7 @@
     shape.fillColor = [SKColor clearColor];
     shape.strokeColor = _lineColor;
     shape.lineWidth = _outlineWidth;
-    shape.zPosition = self.zPosition + 0.2;
+    shape.zPosition = 2;
     return shape;
 }
 
@@ -126,7 +124,7 @@
                 CGFloat x = sin(startAngle + wedgeAngle / 2.0) * _labelDistance;
                 CGFloat y = cos(startAngle + wedgeAngle / 2.0) *_labelDistance;
                 label.position = CGPointMake(x, y);
-                label.zPosition = self.zPosition + 0.3;
+                label.zPosition = 3;
                 [labels addChild:label];
             }
         }
@@ -135,7 +133,7 @@
         startAngle += wedgeAngle;
 
     }
-    node.zPosition = self.zPosition + 0.1;
+    node.zPosition = 1;
     return node;
 }
 
@@ -173,7 +171,7 @@
     shape.strokeColor = c;
     shape.lineWidth = 0.1;
     shape.zRotation =  M_PI / 2.0;
-    shape.zPosition = self.zPosition;
+    shape.zPosition = 1;
     shape.position = CGPointMake(0,0);
 
     return shape;
@@ -186,7 +184,6 @@
     [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) ];
     [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(backgroundColor))];
     [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(insideLineWidth))];
-    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(zPosition))];
 }
 
 #pragma mark KVO

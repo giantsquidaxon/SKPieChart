@@ -25,6 +25,7 @@
 		3CEF2D47189BFEFE00D95D0E /* Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D43189BFEFE00D95D0E /* Apple.png */; };
 		3CEF2D48189BFEFE00D95D0E /* Umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D44189BFEFE00D95D0E /* Umbrella.png */; };
 		3CEF2D49189BFEFE00D95D0E /* Strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D45189BFEFE00D95D0E /* Strawberry.png */; };
+		3CEF2D4C189C190100D95D0E /* SKGraphPieChartSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF2D4B189C190100D95D0E /* SKGraphPieChartSimple.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		3CEF2D43189BFEFE00D95D0E /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
 		3CEF2D44189BFEFE00D95D0E /* Umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Umbrella.png; sourceTree = "<group>"; };
 		3CEF2D45189BFEFE00D95D0E /* Strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strawberry.png; sourceTree = "<group>"; };
+		3CEF2D4A189C190100D95D0E /* SKGraphPieChartSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGraphPieChartSimple.h; sourceTree = "<group>"; };
+		3CEF2D4B189C190100D95D0E /* SKGraphPieChartSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKGraphPieChartSimple.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				3C8267FF189188050016C59C /* SKGraphPieChartDataSource.h */,
 				3C8267FC189187460016C59C /* SKGraphPieChart.h */,
 				3C8267FD189187460016C59C /* SKGraphPieChart.m */,
+				3CEF2D4A189C190100D95D0E /* SKGraphPieChartSimple.h */,
+				3CEF2D4B189C190100D95D0E /* SKGraphPieChartSimple.m */,
 				3CEF2D42189BFEFE00D95D0E /* Banana.png */,
 				3CEF2D43189BFEFE00D95D0E /* Apple.png */,
 				3CEF2D44189BFEFE00D95D0E /* Umbrella.png */,
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CEF2D4C189C190100D95D0E /* SKGraphPieChartSimple.m in Sources */,
 				3C8267D9189186B30016C59C /* MyScene.m in Sources */,
 				3C8267FE189187460016C59C /* SKGraphPieChart.m in Sources */,
 				3C8267D1189186B30016C59C /* main.m in Sources */,
