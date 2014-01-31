@@ -11,7 +11,7 @@
 @implementation SKGraphPieChart{
     SKNode *backgroundShape;
     SKNode *outlineShape;
-    SKNode *pieSlices;
+    SKNode *labels;
 }
 
 -(id)init
@@ -38,13 +38,15 @@
 -(void) refreshPieChart
 {
     [self removeAllChildren];
+    labels = nil;
     backgroundShape = [self drawBackground];
     outlineShape = [self drawOutline];
-    pieSlices = [self drawAllSectors];
+    _wedges = [self drawAllSectors];
     
-    [self addChild:pieSlices];
+    [self addChild:_wedges];
     [self addChild:outlineShape];
     [self addChild:backgroundShape];
+    if (labels) [self addChild:labels];
 }
 
 -(SKNode *)drawBackground
@@ -87,15 +89,51 @@
 
 -(SKNode *)drawAllSectors
 {
+    // Root node for wedge nodes
     SKNode *node = [[SKNode alloc] init];
+    
     NSUInteger n = [_dataDelegate numberOfSectorsForPieChart:self];
+    
+    // See if delegate provides labels
+    bool addLabels = [_dataDelegate respondsToSelector:@selector(labelNodeForPieChart:sectorIndex:)];
+    
+    // See if delegate provides names
+    bool addNames = [_dataDelegate respondsToSelector:@selector(nameForPieChart:sectorIndex:)];
+    if (addLabels) labels = [[SKNode alloc] init];
+    
     CGFloat startAngle = 0.0;
     for (NSUInteger i = 0; i < n; i++){
+        // Get wedge proportions and colour from delegate
         SKColor *wedgeColor = [_dataDelegate colorForPieChart:self sectorIndex:i];
         CGFloat wedgeAngle = [_dataDelegate proportionForPieChart:self sectorIndex:i] * 2 * M_PI;
+        
+        // Make wedge node and add it to root node for wedges
         SKNode *wedge = [self drawSectorFromAngle:startAngle toAngle:startAngle + wedgeAngle withColor:wedgeColor];
-        startAngle += wedgeAngle;
         [node addChild:wedge];
+        
+        // Add name if necessary
+        if (addNames){
+            NSString *name = [_dataDelegate nameForPieChart:self sectorIndex:i];
+            if (name){
+                wedge.name = name;
+            }
+        }
+        
+        // Add label if necessary
+        if (addLabels){
+            SKNode *label = [_dataDelegate labelNodeForPieChart:self sectorIndex:i];
+            if (label){
+                CGFloat x = sin(startAngle + wedgeAngle / 2.0) * _labelDistance;
+                CGFloat y = cos(startAngle + wedgeAngle / 2.0) *_labelDistance;
+                label.position = CGPointMake(x, y);
+                label.zPosition = self.zPosition + 0.3;
+                [labels addChild:label];
+            }
+        }
+        
+        // Move start angle of next wedge on
+        startAngle += wedgeAngle;
+
     }
     node.zPosition = self.zPosition + 0.1;
     return node;

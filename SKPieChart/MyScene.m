@@ -21,33 +21,29 @@
                                        CGRectGetMidY(self.frame));
         
         
-        SKGraphPieChart *sprite = [[SKGraphPieChart alloc] init];
-        sprite.dataDelegate = self;
+        SKGraphPieChart *pie = [[SKGraphPieChart alloc] init];
+        pie.dataDelegate = self;
         
-        sprite.position = location;
-        sprite.outsideRadius = 300.0;
-        sprite.insideRadius = 200.0;
-        [sprite refreshPieChart];
+        pie.position = location;
+        pie.outsideRadius = 300.0;
+        pie.insideRadius = 200.0;
+        pie.labelDistance = 370.0;
+        pie.backgroundColor = [SKColor clearColor];
+        [pie refreshPieChart];
         
-        [self addChild:sprite];
+        [self addChild:pie];
+        
+        SKNode *strawberry = [pie.wedges childNodeWithName:@"Strawberry"];
+        [strawberry runAction:[SKAction repeatActionForever:[SKAction sequence:@[[SKAction fadeAlphaTo:0.0 duration:0.5],
+                                                                                 [SKAction fadeAlphaTo:1.0 duration:0.1]]]]];
         
     }
+    
     return self;
 }
 
 -(void)mouseDown:(NSEvent *)theEvent {
      /* Called when a mouse click occurs */
-    
-    CGPoint location = [theEvent locationInNode:self];
-    
-    SKGraphPieChart *sprite = [[SKGraphPieChart alloc] init];
-    sprite.dataDelegate = self;
-    
-    sprite.position = location;
-    sprite.outsideRadius = 300.0;
-    [sprite refreshPieChart];
-    
-    [self addChild:sprite];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -101,6 +97,42 @@
             break;
     }
     return [SKColor clearColor];
+}
+
+-(SKNode *) labelNodeForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i;
+{
+    SKSpriteNode *label;
+    switch (i) {
+        case 0:
+            label = [SKSpriteNode spriteNodeWithImageNamed:@"Strawberry"];
+            break;
+        case 1:
+            label = [SKSpriteNode spriteNodeWithImageNamed:@"Umbrella"];
+            break;
+        case 2:
+            label = [SKSpriteNode spriteNodeWithImageNamed:@"Apple"];
+            break;
+        case 3:
+            label = [SKSpriteNode spriteNodeWithImageNamed:@"Banana"];
+            break;
+        default:
+            break;
+    }
+    label.xScale = 5.0;
+    label.yScale = 5.0;
+    label.anchorPoint = CGPointMake(0.5, 0.5);
+    [label runAction:[SKAction repeatActionForever:[SKAction sequence:@[[SKAction rotateByAngle:0.4 duration:0.5],
+                                          [SKAction rotateByAngle:-0.4 duration:0.5]]]]];
+    return label;
+}
+
+-(NSString *) nameForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i;
+{
+    if (i == 0) {
+        return @"Strawberry";
+    }else{
+        return nil;
+    }
 }
 
 @end

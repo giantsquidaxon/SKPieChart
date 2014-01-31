@@ -23,8 +23,14 @@
 /// Background color of outline around pie chart
 @property (strong) SKColor *backgroundColor;
 
-/// Radius of
+/// Radius of center region of pie chart, if any.
 @property CGFloat insideRadius;
+
+/// Distance of labels from center of chart
+@property CGFloat labelDistance;
+
+/// Root node for chart's wedges
+@property (readonly, strong) SKNode *wedges;
 
 @property CGFloat insideLineWidth;
 

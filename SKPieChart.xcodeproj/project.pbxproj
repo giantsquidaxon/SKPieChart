@@ -15,13 +15,16 @@
 		3C8267D7189186B30016C59C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267D6189186B30016C59C /* MainMenu.xib */; };
 		3C8267D9189186B30016C59C /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267D8189186B30016C59C /* MyScene.m */; };
 		3C8267DC189186B30016C59C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267DB189186B30016C59C /* AppDelegate.m */; };
-		3C8267DF189186B30016C59C /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267DE189186B30016C59C /* Spaceship.png */; };
 		3C8267E1189186B30016C59C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267E0189186B30016C59C /* Images.xcassets */; };
 		3C8267E8189186B30016C59C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267E7189186B30016C59C /* XCTest.framework */; };
 		3C8267E9189186B30016C59C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8267C2189186B30016C59C /* Cocoa.framework */; };
 		3C8267F1189186B30016C59C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8267EF189186B30016C59C /* InfoPlist.strings */; };
 		3C8267F3189186B30016C59C /* SKPieChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267F2189186B30016C59C /* SKPieChartTests.m */; };
 		3C8267FE189187460016C59C /* SKGraphPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8267FD189187460016C59C /* SKGraphPieChart.m */; };
+		3CEF2D46189BFEFE00D95D0E /* Banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D42189BFEFE00D95D0E /* Banana.png */; };
+		3CEF2D47189BFEFE00D95D0E /* Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D43189BFEFE00D95D0E /* Apple.png */; };
+		3CEF2D48189BFEFE00D95D0E /* Umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D44189BFEFE00D95D0E /* Umbrella.png */; };
+		3CEF2D49189BFEFE00D95D0E /* Strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF2D45189BFEFE00D95D0E /* Strawberry.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +54,6 @@
 		3C8267DA189186B30016C59C /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		3C8267DB189186B30016C59C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3C8267DD189186B30016C59C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3C8267DE189186B30016C59C /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		3C8267E0189186B30016C59C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C8267E6189186B30016C59C /* SKPieChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKPieChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8267E7189186B30016C59C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,6 +63,10 @@
 		3C8267FC189187460016C59C /* SKGraphPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGraphPieChart.h; sourceTree = "<group>"; };
 		3C8267FD189187460016C59C /* SKGraphPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKGraphPieChart.m; sourceTree = "<group>"; };
 		3C8267FF189188050016C59C /* SKGraphPieChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGraphPieChartDataSource.h; sourceTree = "<group>"; };
+		3CEF2D42189BFEFE00D95D0E /* Banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Banana.png; sourceTree = "<group>"; };
+		3CEF2D43189BFEFE00D95D0E /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
+		3CEF2D44189BFEFE00D95D0E /* Umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Umbrella.png; sourceTree = "<group>"; };
+		3CEF2D45189BFEFE00D95D0E /* Strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strawberry.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +142,10 @@
 				3C8267FF189188050016C59C /* SKGraphPieChartDataSource.h */,
 				3C8267FC189187460016C59C /* SKGraphPieChart.h */,
 				3C8267FD189187460016C59C /* SKGraphPieChart.m */,
-				3C8267DE189186B30016C59C /* Spaceship.png */,
+				3CEF2D42189BFEFE00D95D0E /* Banana.png */,
+				3CEF2D43189BFEFE00D95D0E /* Apple.png */,
+				3CEF2D44189BFEFE00D95D0E /* Umbrella.png */,
+				3CEF2D45189BFEFE00D95D0E /* Strawberry.png */,
 				3C8267E0189186B30016C59C /* Images.xcassets */,
 				3C8267CB189186B30016C59C /* Supporting Files */,
 			);
@@ -248,9 +257,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8267DF189186B30016C59C /* Spaceship.png in Resources */,
+				3CEF2D47189BFEFE00D95D0E /* Apple.png in Resources */,
 				3C8267E1189186B30016C59C /* Images.xcassets in Resources */,
+				3CEF2D48189BFEFE00D95D0E /* Umbrella.png in Resources */,
+				3CEF2D46189BFEFE00D95D0E /* Banana.png in Resources */,
 				3C8267CF189186B30016C59C /* InfoPlist.strings in Resources */,
+				3CEF2D49189BFEFE00D95D0E /* Strawberry.png in Resources */,
 				3C8267D5189186B30016C59C /* Credits.rtf in Resources */,
 				3C8267D7189186B30016C59C /* MainMenu.xib in Resources */,
 			);
