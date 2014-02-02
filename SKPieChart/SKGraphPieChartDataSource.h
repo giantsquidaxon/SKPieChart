@@ -9,22 +9,23 @@
 #import <Foundation/Foundation.h>
 @class SKGraphPieChart;
 
+/** Data sources for SKGraphPieChart objects should implement this protocol. It specifies the number of wedges to plot, as well as the proportions and colors for each wedge. Optionally, nodes to use as labels and names for each sector can be specified. For simple static charts, consider using SKGraphPieChartSimple instead of implementing the delegate protocol. */
 @protocol SKGraphPieChartDataSource <NSObject>
-/// Return number of sectors for a given chart
+/// Return number of sectors to be plotted for a given chart
 -(NSUInteger) numberOfSectorsForPieChart:(SKGraphPieChart *) chart;
 
-/// Return proportion of a given sector for a given chart, with proportions being positive floats adding to a total of 1.0
+/// Returns the proportion of a given sector for a given chart, with proportions being positive floats adding to a total of 1.0.
 -(float) proportionForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i;
 
-/// Return color for a given sector of a given chart
+/// Returns the color for a given sector of a given chart.
 -(SKColor *) colorForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i;
 
 @optional
 
-/// A node to use as a label for a section, or nil
+/// Returns a node to use as a label for a given sector of a given chart, or nil if there is to be no label for that sector.
 -(SKNode *) labelNodeForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i;
 
-/// A name to use for the sprite representing a sector
+/// Returns a node to use as a label for a given sector of a given chart, so that it can be identified within the chart's "wedges" node.
 -(NSString *) nameForPieChart:(SKGraphPieChart *) chart sectorIndex:(NSUInteger) i;
 
 @end

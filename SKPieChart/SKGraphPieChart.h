@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 #import "SKGraphPieChartDataSource.h"
 
+/** A class for producing pie charts in SpriteKit. The proportions and colors for each wedge are fetched from a delegate object conforming to the <SKGRaphPieChartDataSource> protocol. */
+
 @interface SKGraphPieChart : SKNode
 
 /// Radius of pie chart
@@ -32,26 +34,27 @@
 /// Root node for chart's wedges
 @property (readonly, strong) SKNode *wedges;
 
-@property CGFloat insideLineWidth;
-
 /// Delegate conforming to <SKGraphPieChartDataSource> protocol
 @property (assign) id<SKGraphPieChartDataSource> dataDelegate;
 
-/// Make node containing the pie chart after pulling data from delegate
+/** Redraw the pie chart.
+ Should be called when changes have been made to drawing properties, when the data being plotted has changed, and when the graph is first drawn. */
 -(void) refreshPieChart;
 
-/// Make node containing the background layer of the pie chart
+/** Make node containing the background layer of the pie chart. */
 -(SKNode *)drawBackground;
 
-/// Make node containing the outline layer of the pie chart
+/** Make node containing the outline layer of the pie chart */
 -(SKNode *)drawOutline;
 
 /**
- Draw a segment of the pie chart
+ Draw a segment of the pie chart.
  @param startAngle the starting angle of the sector
  @param endAngle the ending angle of the sector
  @param c the colour to fill the sector with
- @returns a newly initialized object
+ @returns SKNode of slice.
+ 
+ Will also add any node labels for this segment to the labels node. This should probably be moved somewhere else.
  */
 -(SKNode *)drawSectorFromAngle:(CGFloat)startAngle toAngle:(CGFloat)endAngle withColor:(SKColor *)c;
 

@@ -23,13 +23,12 @@
         _outlineWidth = 1.0;
         _lineColor = [SKColor whiteColor];
         _backgroundColor = [SKColor blackColor];
-        _insideLineWidth = 20.0;
         _insideRadius = 0.0;
-        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(outsideRadius)) options:0 context:Nil];
-        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(outlineWidth)) options:0 context:Nil];
-        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) options:0 context:Nil];
-        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(backgroundColor)) options:0 context:Nil];
-        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(insideLineWidth)) options:0 context:Nil];
+//        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(outsideRadius)) options:0 context:Nil];
+//        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(outlineWidth)) options:0 context:Nil];
+//        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) options:0 context:Nil];
+//        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(backgroundColor)) options:0 context:Nil];
+//        [self addObserver:self forKeyPath:NSStringFromSelector(@selector(insideLineWidth)) options:0 context:Nil];
     }
     return self;
 }
@@ -179,11 +178,11 @@
 
 -(void)dealloc
 {
-    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(outsideRadius))];
-    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(outlineWidth))];
-    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) ];
-    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(backgroundColor))];
-    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(insideLineWidth))];
+//    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(outsideRadius))];
+//    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(outlineWidth))];
+//    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(lineColor)) ];
+//    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(backgroundColor))];
+//    [self removeObserver:self forKeyPath:NSStringFromSelector(@selector(insideLineWidth))];
 }
 
 #pragma mark KVO
